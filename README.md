@@ -1,0 +1,2 @@
+# PHP Pass-by-Reference Gotcha
+This example demonstrates a subtle but important aspect of PHP's pass-by-reference mechanism, specifically regarding array modifications.  The `increment_array_values` function modifies the input array directly due to pass-by-reference. However, creating a copy of the array before passing it to the function may still cause unintended modifications if not handled correctly.  This is because `$another_array = $my_array;` doesn't create a deep copy but a shallow copy, so both variables point to the same underlying array data.
